@@ -1,0 +1,23 @@
+*{
+    background-color: aqua;
+}
+
+
+.home-page {
+    text-align: center;
+    
+}
+
+.main-title{
+    color : rgb(3, 119, 13);
+    font-size: 30px;
+    font-weight: bold; 
+    font-family: "Georgia", sans-serif;
+}
+
+.welcome-message
+{
+    font-family: "Copperplate", "Papyrus", "fantasy";
+    color : rgb(28, 11, 82);
+
+}
