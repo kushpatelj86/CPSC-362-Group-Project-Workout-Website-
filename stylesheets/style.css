@@ -5,7 +5,6 @@
 
 .home-page {
     text-align: center;
-    
 }
 
 .main-title{
@@ -15,9 +14,19 @@
     font-family: "Georgia", sans-serif;
 }
 
+
+.inner-container{
+    text-align: center;
+}
 .welcome-message
 {
     font-family: "Copperplate", "Papyrus", "fantasy";
     color : rgb(28, 11, 82);
+
+}
+
+
+.menu-page{
+    text-align: center;
 
 }
