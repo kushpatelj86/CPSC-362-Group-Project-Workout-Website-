@@ -15,14 +15,41 @@
 }
 
 
-.inner-container{
+.message-title{
+    text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif
 }
+
+.message-title a{
+    text-decoration: none;
+    color: rgb(255, 60, 0);
+    
+    display: block;
+}
+
+.message-title a::before{
+    content:"";
+    position: absolute;
+    background: #40705f;
+    height: 6px;
+    width: 12%;
+    display: block;
+    bottom : 360px;
+
+    left: 280;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
+}
+
+.message-title a:hover:before{
+    transform: scaleX(1);
+}
+
 .welcome-message
 {
     font-family: "Copperplate", "Papyrus", "fantasy";
     color : rgb(28, 11, 82);
-
 }
 
 
@@ -30,4 +57,16 @@
     text-align: center;
     background-color: aqua;
 
+}
+
+.choose-option{
+    display: inline-block;
+}
+
+.choose-option ul{
+    list-style-type: none;
+}
+.choose-option ul li a{
+    text-decoration: none;
+    display: block;
 }
