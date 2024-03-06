@@ -16,7 +16,7 @@
 
 
 .inner-container{
-    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif
 }
 .welcome-message
 {
@@ -28,5 +28,6 @@
 
 .menu-page{
     text-align: center;
+    background-color: aqua;
 
 }
