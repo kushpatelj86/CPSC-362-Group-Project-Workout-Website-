@@ -65,7 +65,7 @@
 }
 
 .message-title .join:hover{
-    background: rgb(59, 3, 131);
+    background: #f6e05e;
     box-shadow: 0 0 5px #f6e05e, 0 0 25px #f6e05e, 0 0 50px #f6e05e, 0 0 200px #f6e05e;
     color : #e91414
 }
@@ -85,13 +85,60 @@
 }
 
 .choose-option{
-    display: inline-block;
+    display:inline-flex;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
 }
 
-.choose-option ul{
-    list-style-type: none;
+.choose-option nav{
+    font-family: "Poppins", sans-serif;
+
 }
-.choose-option ul li a{
+
+
+.choose-option nav ul{
+    list-style-type: none;
+
+}
+
+
+.choose-option nav ul li {
+    vertical-align: baseline;
+    position: relative;
+    margin-top: 10px;
+    padding-left: 30px;
+    width: default;
+    display: inline-block;
+}
+.choose-option nav ul li a{
+    color: blue;
     text-decoration: none;
     display: block;
+}
+
+
+.choose-option nav  ul li a::after{
+    content : "";
+    height : 4px;
+    width : 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    position: relative;
+    left : 0;
+    background: blueviolet;
+    transition: 1.0s;
+    bottom: -0px;
+    display: block;
+
+}   
+
+
+
+
+
+.choose-option nav  ul li a:hover::after{
+    width: 100%;
+
 }
