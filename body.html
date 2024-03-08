@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>FitFix</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheets/style.css"/>
+        <script src="scripts/script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="bmi-page">
+            <div class="main-title">
+                <h1>Calculate BMI</h1>
+            </div>
+
+            <div class="body-stats">
+                <div class="height-info">
+                    <label>Enter Height(inches)</label>
+                    <input type="numbers"  id="height" placeholder="Enter Height(inches)" />
+                </div>
+
+                <div class="weight-info">
+    
+                    <label>Enter Weight(lbs)</label>
+                    <input type="numbers" id="weight"  placeholder="Enter Weight(lbs)" />
+                </div>
+                <div class="buttons">
+                    <button onclick="calcBMI()">Calculate</button>
+                    <button onclick="clear()">Clear</button>
+                </div>
+
+                <div class="results">
+                    <h1 id="BMI-Heading"></h1>
+                    <h2 id="BMI"> </h2>
+                    <p id="Health-Status"></p>
+                </div>
+                    
+
+
+
+            </div>
+            
+
+
+
+            <div>
+                <a class="join" href="menupage.html">Menu Page</a>
+            </div>
+
+
+           
+        </div>
+    </body>
+
+
+
+
+
+
+
+
+</html>
