@@ -142,3 +142,55 @@
     width: 100%;
 
 }
+
+
+.bmi-page{
+    text-align: center;
+    background-color: aqua;
+
+}
+
+
+.menu-title{
+    color : rgb(3, 119, 13);
+    font-size: 22px;
+    font-weight: bold; 
+    font-family: "Copperplate", fantasy;
+}
+
+
+.bmi-title{
+    color : rgb(3, 119, 13);
+    font-size: 22px;
+    font-weight: bold; 
+    font-family: "Lucida Handwriting", cursive;
+}
+
+.height-info{
+    color: blue;
+    font-size: 18px;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    font-family: "Monaco", Monospace;
+}
+
+.height-info input{
+    color: blue;
+    font-size: 18px;
+    font-family: "Monaco", Monospace;
+}
+
+.weight-info{
+    color: blue;
+    font-size: 18px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+
+    font-family: "Monaco", Monospace;
+}
+
+.weight-info input{
+    color: blue;
+    font-size: 18px;
+    font-family: "Monaco", Monospace;
+}
