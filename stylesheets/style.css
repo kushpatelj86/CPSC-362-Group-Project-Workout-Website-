@@ -1,5 +1,5 @@
 *{
-    background-color: aqua;
+    background-color: rgb(187, 233, 246);
 }
 
 
@@ -17,7 +17,7 @@
 
 .message-title{
     text-align: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
 
 /*.message-title a{
@@ -146,8 +146,6 @@
 
 .bmi-page{
     text-align: center;
-    background-color: aqua;
-
 }
 
 
