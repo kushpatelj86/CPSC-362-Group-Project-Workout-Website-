@@ -142,95 +142,231 @@
 
 }
 
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #eaf6f6;
-}
 
-header, footer {
+.bmi-page{
     text-align: center;
-    padding: 1em;
-    background-color: #32a6a8;
-    color: white;
 }
 
-header h1 {
-    margin: 0.5em 0;
+
+.menu-title{
+    color : rgb(3, 119, 13);
+    font-size: 22px;
+    font-weight: bold; 
+    font-family: "Copperplate", fantasy;
 }
 
-.main {
-    padding: 2em;
+
+.bmi-title{
+    color : rgb(3, 119, 13);
+    font-size: 22px;
+    font-weight: bold; 
+    font-family: "Lucida Handwriting", cursive;
 }
 
-/* Navigation Bar Styles */
-.navbar {
-    overflow: hidden;
-    background-color: #333;
+.height-info{
+    color: blue;
+    font-size: 18px;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    font-family: "Monaco", Monospace;
 }
 
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
+.height-info input{
+    color: blue;
+    background: #f2f2f2;
+    font-size: 18px;
+    font-family: "Monaco", Monospace;
+}
+
+.weight-info{
+    color: blue;
+    font-size: 18px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+
+    font-family: "Monaco", Monospace;
+}
+
+.weight-info input{
+    color: blue;
+    background: #f2f2f2;
+    font-size: 18px;
+    font-family: "Monaco", Monospace;
+}
+
+
+.workout-generator-page{
     text-align: center;
-    padding: 14px 20px;
+
+}
+
+.workout-generator-page{
+    text-align: center;
+
+}
+
+
+
+
+
+
+.message-title{
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+.diet-page{
+    text-align: center;
+}
+
+/*.message-title a{
     text-decoration: none;
+    color: rgb(255, 60, 0);
+    
+    display: block;
 }
 
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
+.message-title a::before{
+    content:"";
+    position: absolute;
+    background: #40705f;
+    height: 6px;
+    width: 12%;
+    display: block;
+    bottom : 360px;
+
+    left: 280;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
 }
 
-.navbar a.active {
-    background-color: #32a6a8;
-    color: white;
+.message-title a:hover:before{
+    transform: scaleX(1);
+}*/
+
+.return-home .join{
+    position: relative;
+    border: none;
+    text-decoration: none;
+    color: rgb(225, 86, 86);
+    font-size: 20px;
+    background-color: transparent;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
-/* Diet Plan Form Styles */
+.return-home  .join::before, .message-title .join::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+
+.return-home  .join:hover{
+    background: #85d286;
+    box-shadow: 0 0 5px #85d286, 0 0 25px #85d286, 0 0 50px #85d286, 0 0 200px #85d286;
+    color : #b7e914
+}
+
+.bmi-buttons .btn-sucess{
+    padding:  0.5em 1em;
+    margin-top: 10px;
+    margin : 0.25em;
+    font-size: 12px;
+    font-family: "Monaco", Monospace;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    color:#09f815;
+    background-color: rgb(135, 15, 105);
+    border-color: blueviolet;
+}
+
+.btn-sucess:hover{
+    background: #cccc;
+}
 .diet-form {
-    background-color: white;
+    background-color: rgb(187, 233, 246);
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
+    background-color: rgb(225, 187, 246);
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.diet-form h2 {
+.diet-page .diet-form h2 {
     color: #32a6a8;
+    background-color: rgb(225, 187, 246);
+
 }
 
-.diet-form form {
+.diet-page .diet-form form {
     display: flex;
+    background-color: rgb(225, 187, 246);
+
     flex-direction: column;
 }
 
-.diet-form label {
+.diet-page .diet-form label {
     margin-top: 10px;
+    background-color: rgb(225, 187, 246);
+    font-family: "Monaco", Monospace;
+
 }
 
-.diet-form input[type="number"],
-.diet-form select,
-.diet-form input[type="text"] {
+.diet-page .diet-form input[type="number"],
+.diet-page .diet-form select,
+.diet-page .diet-form input[type="text"] {
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ddd;
+    background: #f2f2f2;
+    border: 1px solid rgb(0, 6, 8);
     border-radius: 4px;
+    font-family: "Monaco", Monospace;
+
 }
 
-.diet-form input[type="submit"] {
+.diet-page .diet-form input[type="submit"] {
     background-color: #32a6a8;
-    color: white;
+    color: rgb(202, 187, 246);
     padding: 10px;
     margin-top: 20px;
     border: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+
     border-radius: 4px;
     cursor: pointer;
 }
 
-.diet-form input[type="submit"]:hover {
+.diet-page .diet-form input[type="submit"]:hover {
     background-color: #2d8c8e;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+.diet-title{
+    color : rgb(3, 119, 13);
+    font-size: 22px;
+    font-weight: bold; 
+    font-family: "Lucida Handwriting", cursive;
+}
+
+
+.workout-generator-title{
+    color : rgb(3, 119, 13);
+    font-size: 22px;
+    font-weight: bold; 
+    font-family: "Lucida Handwriting", cursive;
+}
+
+.diet-message
+{
+    font-family: "Copperplate", "Papyrus", "fantasy";
+    color : rgb(28, 11, 82);
+}
+
+
+
+footer {
+    text-align: center;
 }
