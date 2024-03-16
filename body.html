@@ -9,24 +9,24 @@
 
     <body>
         <div class="bmi-page">
-            <div class="main-title">
+            <div class="bmi-title">
                 <h1>Calculate BMI</h1>
             </div>
 
             <div class="body-stats">
                 <div class="height-info">
-                    <label>Enter Height(inches)</label>
-                    <input type="numbers"  id="height" placeholder="Enter Height(inches)" />
+                    <label>Enter Height(inches):</label>
+                    <input type="numbers"  id="height"/>
                 </div>
 
                 <div class="weight-info">
     
-                    <label>Enter Weight(lbs)</label>
-                    <input type="numbers" id="weight"  placeholder="Enter Weight(lbs)" />
+                    <label>Enter Weight(lbs):</label>
+                    <input type="numbers" id="weight" />
                 </div>
-                <div class="buttons">
-                    <button onclick="calcBMI()">Calculate</button>
-                    <button onclick="clear()">Clear</button>
+                <div class="bmi-buttons">
+                    <button class="btn-sucess" onclick="calcBMI()">Calculate</button>
+                    <button class="btn-sucess" onclick="reload()">Clear</button>
                 </div>
 
                 <div class="results">
@@ -43,7 +43,7 @@
 
 
 
-            <div>
+            <div class="return-home">
                 <a class="join" href="menupage.html">Menu Page</a>
             </div>
 
