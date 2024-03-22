@@ -4,7 +4,7 @@
         <meta charset="UTF-8" >
         <title>FitFix</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheets/workoutgenerator.css"/>
+        <link rel="stylesheet" href="stylesheets/style.css"/>
         <script src="scripts/script.js" defer></script>
     </head>
 <body>
@@ -31,6 +31,12 @@
         <label for="mondayBack"> Back</label><br>
         <input type="checkbox" id="mondayShoulder" name="monday" value="Shoulder">
         <label for="mondayShoulder"> Shoulder</label><br>
+        <input type="checkbox" id="mondayLegs" name="monday" value="Legs">
+        <label for="mondayLegs"> Legs</label><br>
+        <input type="checkbox" id="mondayChest" name="monday" value="Chest">
+        <label for="mondayBack"> Chest</label><br>
+        <input type="checkbox" id="mondayDeltoids" name="monday" value="Deltoids">
+        <label for="mondayShoulder"> Deltoids</label><br>
         <input type="checkbox" id="mondayLegs" name="monday" value="Legs">
         <label for="mondayLegs"> Legs</label><br>
       </td>
@@ -92,7 +98,8 @@
   </table>
   <center><input type="button" onclick="displayWeeklyWorkouts()" value="Submit"></center>
 </form>
-<div><center>
+<div>
+    <center>
 <p id="displayMonday"></p>
 <p id="displayTuesday"></p>
 <p id="displayWednesday"></p>
@@ -100,25 +107,10 @@
 <p id="displayFriday"></p>
 <p id="displaySaturday"></p>
 <p id="displaySunday"></p>
-</center></div>
+</center>
+</div>
 
-<script>
-function displayWeeklyWorkouts() {
-  var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-  days.forEach(day => {
-    var selectedWorkouts = [];
-    var checkboxes = document.querySelectorAll(`input[name='${day}']:checked`);
-    checkboxes.forEach((checkbox) => {
-      selectedWorkouts.push(checkbox.value);
-    });
-    document.getElementById(`display${capitalize(day)}`).innerHTML = `${capitalize(day)}'s Selected Workouts: ` + selectedWorkouts.join(", ");
-  });
-}
 
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-</script>
 <div class="return-home"><center>
     <a class="join" href="menupage.html">Menu Page</a>
 </center></div>

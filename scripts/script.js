@@ -54,3 +54,34 @@ function reload()
 {
     window.location.reload();
 }
+
+function displayWeeklyWorkouts() {
+    var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+    days.forEach(day => {
+      var selectedWorkouts = [];
+      var checkboxes = document.querySelectorAll(`input[name='${day}']:checked`);
+      checkboxes.forEach((checkbox) => {
+        selectedWorkouts.push(checkbox.value);
+      });
+      document.getElementById(`display${capitalize(day)}`).innerHTML = `${capitalize(day)}'s Selected Workouts: ` + selectedWorkouts.join(", ");
+    });
+  }
+  
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  function displayWeeklyWorkouts() {
+    var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+    days.forEach(day => {
+      var selectedWorkouts = [];
+      var checkboxes = document.querySelectorAll(`input[name='${day}']:checked`);
+      checkboxes.forEach((checkbox) => {
+        selectedWorkouts.push(checkbox.value);
+      });
+      document.getElementById(`display${capitalize(day)}`).innerHTML = `${capitalize(day)}'s Selected Workouts: ` + selectedWorkouts.join(", ");
+    });
+  }
+  
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
