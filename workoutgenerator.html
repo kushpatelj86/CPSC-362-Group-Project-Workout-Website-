@@ -1,41 +1,137 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" >
         <title>FitFix</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="stylesheets/style.css"/>
+        <link rel="stylesheet" href="stylesheets/workoutgenerator.css"/>
         <script src="scripts/script.js" defer></script>
     </head>
-
-    <body>
-        <div class="workout-generator-page">
-            <div class="workout-generator-title">
-                <h1>Generate a random workout</h1>
-            </div>
-            
-           
-
-        
-                        
-            <div class="return-home">
-                <a class="join" href="menupage.html">Menu Page</a>
-            </div>
-
-
-           
+<body>
+    <div class="workout-generator-page">
+        <div class="workout-generator-title">
+             <h1><center>Generate a Random Workout</center></h1> 
         </div>
 
-        
-    </body>
+<form id="weeklyWorkoutForm">
+  <table style="width:100%">
+    <tr>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+    <tr>
+      <!-- Monday's Workouts -->
+      <td>
+        <input type="checkbox" id="mondayBack" name="monday" value="Back">
+        <label for="mondayBack"> Back</label><br>
+        <input type="checkbox" id="mondayShoulder" name="monday" value="Shoulder">
+        <label for="mondayShoulder"> Shoulder</label><br>
+        <input type="checkbox" id="mondayLegs" name="monday" value="Legs">
+        <label for="mondayLegs"> Legs</label><br>
+      </td>
+      <!-- Tuesday's Workouts -->
+      <td>
+        <input type="checkbox" id="tuesdayBack" name="tuesday" value="Back">
+        <label for="tuesdayBack"> Back</label><br>
+        <input type="checkbox" id="tuesdayShoulder" name="tuesday" value="Shoulder">
+        <label for="tuesdayShoulder"> Shoulder</label><br>
+        <input type="checkbox" id="tuesdayLegs" name="tuesday" value="Legs">
+        <label for="tuesdayLegs"> Legs</label><br>
+      </td>
+      <!-- Wednesday's Workouts -->
+      <td>
+        <input type="checkbox" id="wednesdayBack" name="wednesday" value="Back">
+        <label for="wednesdayBack"> Back</label><br>
+        <input type="checkbox" id="wednesdayShoulder" name="wednesday" value="Shoulder">
+        <label for="wednesdayShoulder"> Shoulder</label><br>
+        <input type="checkbox" id="wednesdayLegs" name="wednesday" value="Legs">
+        <label for="wednesdayLegs"> Legs</label><br>
+      </td>
+      <!-- Thursday's Workouts -->
+      <td>
+        <input type="checkbox" id="thursdayBack" name="thursday" value="Back">
+        <label for="thursdayBack"> Back</label><br>
+        <input type="checkbox" id="thursdayShoulder" name="thursday" value="Shoulder">
+        <label for="thursdayShoulder"> Shoulder</label><br>
+        <input type="checkbox" id="thursdayLegs" name="thursday" value="Legs">
+        <label for="thursdayLegs"> Legs</label><br>
+      </td>
+      <!-- Friday's Workouts -->
+      <td>
+        <input type="checkbox" id="fridayBack" name="friday" value="Back">
+        <label for="fridayBack"> Back</label><br>
+        <input type="checkbox" id="fridayShoulder" name="friday" value="Shoulder">
+        <label for="fridayShoulder"> Shoulder</label><br>
+        <input type="checkbox" id="fridayLegs" name="friday" value="Legs">
+        <label for="fridayLegs"> Legs</label><br>
+      </td>
+      <!-- Saturday's Workouts -->
+      <td>
+        <input type="checkbox" id="saturdayBack" name="saturday" value="Back">
+        <label for="saturdayBack"> Back</label><br>
+        <input type="checkbox" id="saturdayShoulder" name="saturday" value="Shoulder">
+        <label for="saturdayShoulder"> Shoulder</label><br>
+        <input type="checkbox" id="saturdayLegs" name="saturday" value="Legs">
+        <label for="saturdayLegs"> Legs</label><br>
+      </td>
+      <!-- Sunday's Workouts -->
+      <td>
+        <input type="checkbox" id="sundayBack" name="sunday" value="Back">
+        <label for="sundayBack"> Back</label><br>
+        <input type="checkbox" id="sundayShoulder" name="sunday" value="Shoulder">
+        <label for="sundayShoulder"> Shoulder</label><br>
+        <input type="checkbox" id="sundayLegs" name="sunday" value="Legs">
+        <label for="sundayLegs"> Legs</label><br>
+      </td>
+    </tr>
+  </table>
+  <center><input type="button" onclick="displayWeeklyWorkouts()" value="Submit"></center>
+</form>
+<div><center>
+<p id="displayMonday"></p>
+<p id="displayTuesday"></p>
+<p id="displayWednesday"></p>
+<p id="displayThursday"></p>
+<p id="displayFriday"></p>
+<p id="displaySaturday"></p>
+<p id="displaySunday"></p>
+</center></div>
 
-    <footer>
-            
-        <p>&copy; 2024 FitFix. All rights reserved.</p>
-    </footer>
+<script>
+function displayWeeklyWorkouts() {
+  var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+  days.forEach(day => {
+    var selectedWorkouts = [];
+    var checkboxes = document.querySelectorAll(`input[name='${day}']:checked`);
+    checkboxes.forEach((checkbox) => {
+      selectedWorkouts.push(checkbox.value);
+    });
+    document.getElementById(`display${capitalize(day)}`).innerHTML = `${capitalize(day)}'s Selected Workouts: ` + selectedWorkouts.join(", ");
+  });
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+</script>
+<div class="return-home"><center>
+    <a class="join" href="menupage.html">Menu Page</a>
+</center></div>
 
 
 
+</div>
 
 
+</body>
 
+<footer><center>
+
+<p>&copy; 2024 FitFix. All rights reserved.</p>
+</center></footer>
 </html>
