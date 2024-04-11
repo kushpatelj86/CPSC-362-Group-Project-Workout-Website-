@@ -85,3 +85,20 @@ function displayWeeklyWorkouts() {
   function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
+
+
+
+  function generatePlan(event){
+
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    document.getElementById('plan').innerHTML = `Did not work`;
+
+    fetch('/api/users').then(response => response.json()).then(data =>
+    {
+      plan.innerHTML = JSON.stringify(data, null, 2);
+    }).catch(err => {
+      console.error('Error:', err);
+
+    });
+  }
