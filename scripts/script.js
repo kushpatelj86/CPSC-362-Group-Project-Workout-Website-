@@ -87,18 +87,18 @@ function displayWeeklyWorkouts() {
   }
 
 
-
-  function generatePlan(event){
-
+  function generatePlan(event) {
     event.preventDefault(); // Prevent the form from submitting normally
 
-    document.getElementById('plan').innerHTML = `Did not work`;
+    document.getElementById('plan').innerHTML = `Loading...`;
 
-    fetch('/api/users').then(response => response.json()).then(data =>
-    {
-      plan.innerHTML = JSON.stringify(data, null, 2);
-    }).catch(err => {
-      console.error('Error:', err);
-
+    fetch('/api/users')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('plan').innerHTML = JSON.stringify(data, null, 2);
+    })
+    .catch(err => {
+        console.error('Error:', err);
+        document.getElementById('plan').innerHTML = `Error fetching data`;
     });
-  }
+}
