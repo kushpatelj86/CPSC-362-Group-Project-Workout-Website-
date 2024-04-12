@@ -407,3 +407,32 @@ table, th, td{
 .workout-generator-button:hover{
     background: #cccc;
 }
+.navbar a{
+    color:white !important;
+    background-color: transparent;
+    font-family: 'Vidaloka', serif;
+}
+navbar-collapse{
+    color:white !important;
+    background-color: transparent;
+    font-family: 'Vidaloka', serif;
+}
+html body{
+    background-color: rgb(187, 233, 246);
+}
+
+.menu-title{
+        position: relative;
+        text-align: center;
+        color: white;
+        
+}
+.image-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: antiquewhite;
+    font-size: 150px;
+}
