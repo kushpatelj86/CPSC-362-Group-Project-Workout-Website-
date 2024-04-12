@@ -13,10 +13,14 @@
     font-weight: bold; 
     font-family: "Georgia", sans-serif;
 }
+#info-form{
+    align-items: center;
 
+}
 
 .message-title{
     text-align: center;
+    align-items: center;
     color : rgb(3, 90, 119);
     font-family: "Copperplate", "Papyrus", "fantasy";
 }
@@ -83,6 +87,7 @@
 
 .menu-page{
     text-align: center;
+    align-items: center;
 
 }
 
@@ -298,6 +303,56 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+.menu-form {
+    background-color: rgb(187, 233, 246);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: rgb(225, 187, 246);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-page .menu-form h2 {
+    color: #32a6a8;
+    background-color: rgb(225, 187, 246);
+
+}
+
+
+.menu-page .menu-form h2 {
+    color: #32a6a8;
+    background-color: rgb(225, 187, 246);
+
+}
+
+.menu-page .menu-form form {
+    display: flex;
+    background-color: rgb(225, 187, 246);
+
+    flex-direction: column;
+}
+
+.menu-page .menu-form label {
+    margin-top: 10px;
+    background-color: rgb(225, 187, 246);
+    font-family: "Monaco", Monospace;
+
+}
+.menu-page .menu-form input[type="number"],
+.menu-page .menu-form select,
+.menu-page .menu-form input[type="text"] {
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    background: #f2f2f2;
+    border: 1px solid rgb(0, 6, 8);
+    border-radius: 4px;
+    font-family: "Monaco", Monospace;
+
+}
+
 .diet-page .diet-form h2 {
     color: #32a6a8;
     background-color: rgb(225, 187, 246);
@@ -462,6 +517,7 @@ html body{
 
 .form-container {
     background-color: #fff;
+    align-items: center;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
