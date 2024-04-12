@@ -90,6 +90,8 @@ if not table_exists('MUSCLE_GROUPS'):
 
         )
     ''')
+
+
 # Insert sample data into FOOD table
 #cursor.execute("INSERT INTO FOOD (FOOD_NAME, CALORIES, CARBS, FATS, PROTEINS, FIBER, FOOD_GROUP) VALUES ('APPLE PIE', 60, 10, 0, 2, 0, 'CARBS')")
 #cursor.execute("INSERT INTO FOOD (FOOD_NAME, CALORIES, CARBS, FATS, PROTEINS, FIBER, FOOD_GROUP) VALUES ('CHERRY PIE', 55, 11, 0, 1, 0, 'CARBS')")
