@@ -2,6 +2,8 @@ import sqlite3
 
 from flask import Flask, jsonify
 app = Flask(__name__)
+from flask_cors import CORS
+CORS(app)
 # Connect to the SQLite database
 conn = sqlite3.connect('gym.db')
 
