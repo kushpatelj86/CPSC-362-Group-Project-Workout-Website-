@@ -113,3 +113,83 @@ def get_users():
     # Convert the data to JSON format
     user_data = [{'CWID': user[0], 'NAME': user[1], 'WEIGHT': user[2], 'HEIGHT': user[3], 'AGE': user[4], 'ALLERGIES': user[5]} for user in users]
     return jsonify(user_data)
+
+
+
+
+if __name__ == '__main__':
+    # Run the app and specify the host and port
+    app.run(debug=True, port=3456)
+
+
+
+
+
+
+
+
+
+
+
+"""
+
+
+
+
+import sqlite3
+from flask import Flask, jsonify, request
+app = Flask(__name__)
+from flask_cors import CORS
+CORS(app, origins=["http://127.0.0.1:3456"])
+
+# Connect to the SQLite database
+conn = sqlite3.connect('gym.db')
+
+# Create a cursor object to execute SQL statements
+cursor = conn.cursor()
+
+# Function to check if a table exists
+def table_exists(table_name):
+    cursor.execute("SELECT name FROM sqlite_master WHERE type = 'table' AND name =?", (table_name,))
+    return cursor.fetchone() is not None
+
+if not table_exists('User'):    
+    # Execute the CREATE TABLE statement for User
+    cursor.execute('''
+        CREATE TABLE User (
+            CWID INTEGER PRIMARY KEY AUTOINCREMENT,
+            NAME VARCHAR(255),
+            WEIGHT INTEGER,
+            HEIGHT INTEGER,
+            AGE INTEGER,
+            ALLERGIES VARCHAR(255)
+        )
+    ''')
+
+# Define the route for '/users' and print the URL
+@app.route('/users', methods=['GET'])
+def get_users():
+    # Print the URL when this route is accessed
+    print("URL for '/users' route:", request.url)
+    
+    conn = sqlite3.connect('gym.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM User")
+    users = cursor.fetchall()
+    conn.close()
+    # Convert the data to JSON format
+    user_data = [{'CWID': user[0], 'NAME': user[1], 'WEIGHT': user[2], 'HEIGHT': user[3], 'AGE': user[4], 'ALLERGIES': user[5]} for user in users]
+    return jsonify(user_data)
+
+if __name__ == '__main__':
+    # Run the app and specify the host and port
+    app.run(debug=True, port=3456)
+
+
+
+
+
+
+
+
+"""
