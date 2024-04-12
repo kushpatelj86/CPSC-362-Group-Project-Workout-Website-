@@ -1,5 +1,7 @@
 import sqlite3
 
+from flask import Flask, jsonify
+app = Flask(__name__)
 # Connect to the SQLite database
 conn = sqlite3.connect('gym.db')
 
@@ -97,9 +99,13 @@ if not table_exists('MUSCLE_GROUPS'):
 
 
 
-
-# Commit the transaction
-conn.commit()
-
-# Close the connection
-conn.close()
+@app.route('/api/users')
+def get_users():
+    conn = sqlite3.connect('gym.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM User")
+    users = cursor.fetchall()
+    conn.close()
+    # Convert the data to JSON format
+    user_data = [{'CWID': user[0], 'NAME': user[1], 'WEIGHT': user[2], 'HEIGHT': user[3], 'AGE': user[4], 'ALLERGIES': user[5]} for user in users]
+    return jsonify(user_data)
