@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diet Plan | FitFix</title>
     <link rel="stylesheet" href="stylesheets/style.css"/>
+    <script src="scripts/script.js" defer></script>
+
 </head>
 <body>
     <div class="diet-page">
@@ -22,7 +24,7 @@
 
             <section class="diet-form">
                 <h2>Create Your Diet Plan</h2>
-                <form action="#" method="post">
+                <form action="#" method="post"  onsubmit="generatePlan(event)">
                     <div>
                         
                     </div>
@@ -43,6 +45,8 @@
 
                     <input type="submit" value="Generate Plan">
                 </form>
+                <div id="plan"></div>
+
             </section>
         </div>
        
