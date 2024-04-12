@@ -408,18 +408,31 @@ table, th, td{
     background: #cccc;
 }
 .navbar a{
-    color:white !important;
+    color:green !important;
     background-color: transparent;
     font-family: 'Vidaloka', serif;
 }
+
+.navbar a:hover{
+    color:blue !important;
+    
+}
+
 navbar-collapse{
-    color:white !important;
-    background-color: transparent;
+    color:green !important;
+    background-color: burlywood;
     font-family: 'Vidaloka', serif;
 }
 html body{
     background-color: rgb(187, 233, 246);
 }
+
+.navbar navbar-expand-lg navbar-light bg-transparent sticky-top{
+    background-color: #32a6a8;
+}
+
+
+
 
 .menu-title{
         position: relative;
@@ -436,3 +449,57 @@ html body{
     color: antiquewhite;
     font-size: 150px;
 }
+
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.divider {
+    margin: 0 20px;
+    border-right: 2px solid #ccc;
+    height: 300px; /* Adjust height based on content */
+}
+
+/* Additional styles for login/signup buttons */
+form button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #32a6a8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2d8c8e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
