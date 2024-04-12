@@ -12,22 +12,26 @@
 
     </head>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent sticky-top">
-        <a class="navbar-brand" href="menupage.html">FitFix</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="body.html"> Body Composition <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dietplan.html"> Diet Plan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="workoutgenerator.html"> Workout </a>
-            </li>
-          </ul>
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item active">
+                    <a class="navbar-brand" href="menupage.html">FitFix</a>
+                </li>
+        
+                <li class="nav-item active">
+                  <a class="nav-link" href="body.html"> Body Composition <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="dietplan.html"> Diet Plan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="workoutgenerator.html"> Workout </a>
+                </li>
+              </ul>
         </div>
       </nav>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -35,29 +39,53 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <body>
+        
+
+
+
         <div class="menu-page">
-            <div class="menu-title">
-                <header>
-                    <h1>FitFix</h1>
-                </header>
-            </div>       
-            <div class="welcome-message">
-                <header>
-                    <p>Welcome to FitFix, your journey to become
-                        fit begins here and your fitness gets fixed
-                    </p>
-                </header>
-            </div>
-            <div class="message-title">
-              <h2>Where you come to get your fitness fixed</h2>
-              <a class="join" href="menupage.html">JOIN NOW!</a>
-          </div>
 
 
-
-
+          <div class="menu-title">
+            <header>
+                <h1>FitFix</h1>
+            </header>
+        </div>    
+          <div class="welcome-message">
+            <p>Welcome to FitFix, your journey to become
+              fit begins here and your fitness gets fixed
+          </p>          
         </div>
-
+  
+          <div class="menu-plan">
+              <!-- Content of your Diet Plan Page -->
+  
+              <section class="menu-form">
+                  <h2>Create Your Diet Plan</h2>
+                  <form action="#" method="post"  >
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age" required>
+                    <label for="weight">Weight:</label>
+                    <input type="text" id="weight" name="weight" required>
+                    <label for="height">Height:</label>
+                    <input type="text" id="height" name="height" required>
+                    <button type="submit" >Enter Information</button>
+                  </form>
+                  <div id="plan"></div>
+  
+              </section>
+          </div>
+         
+         
+         
+          <div class="return-home">
+              <a class="join" href="menupage.html">Menu Page</a>
+          </div>
+          
+  
+      </div>
         
     </body>
 
