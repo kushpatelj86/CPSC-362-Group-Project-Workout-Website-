@@ -66,15 +66,31 @@
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                     <label for="age">Age:</label>
-                    <input type="text" id="age" name="age" required>
+                    <input type="number" id="age" name="age" required>
                     <label for="weight">Weight:</label>
-                    <input type="text" id="weight" name="weight" required>
+                    <input type="number" id="weight" name="weight" required>
                     <label for="height">Height:</label>
-                    <input type="text" id="height" name="height" required>
-                    <button type="submit" >Enter Information</button>
+                    <input type="number" id="height" name="height" required>
+
+                    <label for="allergies">Food Allergies:</label>
+                    <select id="allergies" name="allergies">
+                        <option value="none">None</option>
+                        <option value="eggs">Eggs</option>
+                        <option value="peanuts">Peanuts</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="poultry">Poultry</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="chocolate">Chocolate</option>
+
+                    </select>
+
+
+
+                    <button type="submit" onclick="create_user(event)">Enter Information</button>
                   </form>
-                  <div id="plan"></div>
-  
+                  <div id="menu-message"></div>
+                  <div id="status"></div>
+
               </section>
           </div>
          
