@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1.0">
       <link rel="stylesheet" href="stylesheets/style.css"/>
       <script src="scripts/script.js" defer></script>
-      <script src="scripts/send.js" defer></script>
+      <script src="scripts/sendinfo.js" defer></script>
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
@@ -89,14 +89,21 @@
 
 
                     <button type="submit" onclick="create_user(event)">Enter Information</button>
+                    <button type="submit" onclick="get_user(event)">Get Info</button>
+
                   </form>
-                  <div id="menu-message"></div>
-                  <div id="status"></div>
+                  
 
               </section>
+
+             
           </div>
          
-         
+          <div>
+            <h1 id="user"></h1>
+          </div>
+            <div id="status"></div>
+
          
           <div class="return-home">
               <a class="join" href="menupage.html">Menu Page</a>
