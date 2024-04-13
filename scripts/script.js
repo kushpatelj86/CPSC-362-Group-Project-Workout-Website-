@@ -55,53 +55,55 @@ function reload()
     window.location.reload();
 }
 
-function displayWeeklyWorkouts() {
-    var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-    days.forEach(day => {
-      var selectedWorkouts = [];
-      var checkboxes = document.querySelectorAll(`input[name='${day}']:checked`);
-      checkboxes.forEach((checkbox) => {
-        selectedWorkouts.push(checkbox.value);
-      });
-      document.getElementById(`display${capitalize(day)}`).innerHTML = `${capitalize(day)}'s Selected Workouts: ` + selectedWorkouts.join(", ");
-    });
-  }
+
   
-  function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-  function displayWeeklyWorkouts() {
-    var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-    days.forEach(day => {
-      var selectedWorkouts = [];
-      var checkboxes = document.querySelectorAll(`input[name='${day}']:checked`);
-      checkboxes.forEach((checkbox) => {
-        selectedWorkouts.push(checkbox.value);
-      });
-
-      
-      document.getElementById(`display${capitalize(day)}`).innerHTML = `${capitalize(day)}'s Selected Workouts: ` + selectedWorkouts.join(', ');
-      
-      fetch('http://127.0.0.1:3456/workout/plan')
-    .then(response => response.json() )
-    .then(data => {
-        a = JSON.stringify(data, null, 2);
-        document.getElementById(`display${capitalize(day)}`).innerHTML += `(${a})`
-
-    })
-    .catch(err => {
-      
-        document.getElementById(`display${capitalize(day)}`).innerHTML += `(${err.message})`
-
-    });
-
-
-
-
-
-    });
-  }
   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
@@ -125,39 +127,6 @@ function displayWeeklyWorkouts() {
 
 
 
-function create_user(event) {
-  event.preventDefault();
-  var name = document.getElementById('name').value;
-  var weight = document.getElementById('weight').value;
-  var height = document.getElementById('height').value;
-  var age = document.getElementById('age').value;
-  var allergies = document.getElementById('allergies').value;
-
-  var formData = {
-      name: name.toString(),
-      weight: weight.toString(),
-      height: height.toString(),
-      age: age.toString(),
-      allergies: allergies.toString()
-  };
-
-
-  fetch('/create_user', {
-    method: 'POST',  // Ensure this matches the expected method in your Flask route
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Handle response data
-    alert('User created successfully, '+ data);
-  })
-  .catch(error => {
-    alert('Error creating user: ' + error)
-  });
-
 
 
 
@@ -176,7 +145,7 @@ function create_user(event) {
           $('#message').text('Error creating user: ' + error);
       }
   });*/
-}
+
 
 /*fetch('/create_user', {
   method: 'POST',  // Ensure this matches the expected method in your Flask route
