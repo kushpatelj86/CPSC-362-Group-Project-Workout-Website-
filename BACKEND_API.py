@@ -65,10 +65,18 @@ def generate_workout_plan():
     
     return jsonify(workout_plan), 200
 
-#create diet, create workout, find workout buddy, 
 
 
 
+@app.route('/get_diet', methods=['GET'])
+def get_users(food_group, restriction):
+    conn = sqlite3.connect('gym.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ? AND RESTRICTION IS NOT = ? ", (food_group, restriction,))
+    users = cursor.fetchall()
+    conn.close()
+    return jsonify(users), 200
 
+ # cursor.execute("DELETE FROM User WHERE CWID=?", (cwid,))
 if __name__ == '__main__':
     app.run(debug=True)
