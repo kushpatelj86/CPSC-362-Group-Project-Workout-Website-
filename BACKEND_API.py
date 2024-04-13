@@ -1,11 +1,14 @@
 from flask import Flask, request, jsonify
 import sqlite3
 
-app = Flask(fitfix)
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes in the app
 
 @app.route('/create_user', methods=['POST'])
 def create_user():
-    data = request.json
+    data = request.get_json()
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
     cursor.execute("INSERT INTO User (NAME, WEIGHT, HEIGHT, AGE, ALLERGIES) VALUES (?, ?, ?, ?, ?)",
@@ -23,7 +26,7 @@ def get_users():
     conn.close()
     return jsonify(users), 200
 
-@app.route('/update_user/<int:cwid>', methods=['PUT'])
+"""@app.route('/update_user/<int:cwid>', methods=['PUT'])
 def update_user(cwid):
     data = request.json
     conn = sqlite3.connect('gym.db')
@@ -32,7 +35,7 @@ def update_user(cwid):
                    (data['name'], data['weight'], data['height'], data['age'], data['allergies'], cwid))
     conn.commit()
     conn.close()
-    return jsonify({"message": "User updated successfully"}), 200
+    return jsonify({"message": "User updated successfully"}), 200"""
 
 @app.route('/delete_user/<int:cwid>', methods=['DELETE'])
 def delete_user(cwid):
@@ -69,5 +72,3 @@ def generate_workout_plan():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
