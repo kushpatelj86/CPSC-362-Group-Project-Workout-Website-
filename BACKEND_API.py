@@ -82,13 +82,31 @@ def create_diet():
     data = request.get_json()
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ? AND RESTRICTION IS NOT = ?",
-                   (data['food_group'], data['restrictions']))
+    cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ?",
+                   (data['food_group']))
     conn.commit()
     conn.close()
     return jsonify({"message": "User Diet created successfully"}), 201
 
+@app.route('/get_diet', methods=['GET'])
+def get_diet():
+    food_group = request.args.get('food_group')  # Get the 'food_group' parameter from the query string
+    conn = sqlite3.connect('gym.db')
+    cursor = conn.cursor()
 
+    # Use a placeholder '?' in the query to avoid SQL injection
+    cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ?", (food_group))
+
+    # Fetch all rows that match the query
+    diet_data = cursor.fetchall()
+
+    conn.close()
+
+    # Check if any data was found
+    if diet_data:
+        return jsonify({"diet_data": diet_data}), 200  # Return the data as JSON with status code 200 (OK)
+    else:
+        return jsonify({"message": "No diet data found"}), 404  # 
 
  # cursor.execute("DELETE FROM User WHERE CWID=?", (cwid,))
 if __name__ == '__main__':
