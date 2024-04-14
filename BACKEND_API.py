@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import sqlite3
-import database
+from database import *
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -79,33 +79,17 @@ def create_diet(food_group, restriction):
 
 @app.route('/create_diet', methods=['POST'])
 def create_diet():
- 
     data = request.get_json()
-    print("Received data:", data)  # Print received data for debugging
-    print(data['food_group'])
+    print(data)
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
-
-    rows = database.connect_db()
-    for row in rows:
-        if row[7] == data['food_group']:
-            cursor.execute("INSERT INTO FOOD (FOOD_NAME, FOOD_ID, CALORIES, CARBS, FATS, PROTEINS, FIBER, FOOD_GROUP) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                (row[0], row[1], row[2], row[3], row[4],row[5],row[6],data['food_group']))
-            print("found a match and user created")
-
-    
+    cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ?",
+                   (data['food_group'],))
+    num = len(cursor.fetchall())
+    print(num)
     conn.commit()
-
-
-    rows = cursor.fetchall()
-    print("Num rowa: ", len(rows))
-    for row in rows:
-        print(row)
-
     conn.close()
-    print("Database connection closed.")  # Print message for debugging
     return jsonify({"message": "User Diet created successfully"}), 201
-    
     
 
 @app.route('/get_diet', methods=['GET'])
