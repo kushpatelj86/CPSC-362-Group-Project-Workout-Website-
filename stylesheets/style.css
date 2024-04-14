@@ -25,6 +25,19 @@
     font-family: "Copperplate", "Papyrus", "fantasy";
 }
 
+.user-info{
+    color : rgb(3, 119, 13);
+    font-size: 30px;
+    font-weight: bold; 
+    font-family: "Georgia", sans-serif;
+}
+#user{
+    color : rgb(3, 119, 13);
+    font-size: 18px;
+    font-weight: bold; 
+    font-family: "Georgia", sans-serif;
+}
+
 /*.message-title a{
     text-decoration: none;
     color: rgb(255, 60, 0);
@@ -342,7 +355,7 @@
 }
 .menu-page .menu-form input[type="number"],
 .menu-page .menu-form select,
-.menu-page .menu-form input[type="text"] {
+.menu-page .menu-form input[type="text"]  {
     padding: 10px;
     margin-top: 5px;
     text-align: center;
@@ -351,6 +364,17 @@
     border-radius: 4px;
     font-family: "Monaco", Monospace;
 
+}
+
+
+.menu-page .menu-form input[type="submit"]{
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    background: #d17979;
+    border: 1px solid rgb(0, 6, 8);
+    border-radius: 4px;
+    font-family: "Monaco", Monospace;
 }
 
 .diet-page .diet-form h2 {
