@@ -69,7 +69,7 @@ def generate_workout_plan():
 
 
 @app.route('/get_diet', methods=['GET'])
-def get_users(food_group, restriction):
+def get_diet(food_group, restriction):
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ? AND RESTRICTION IS NOT = ? ", (food_group, restriction,))
