@@ -68,14 +68,27 @@ def generate_workout_plan():
 
 
 
-@app.route('/get_diet', methods=['GET'])
-def get_diet(food_group, restriction):
+'''@app.route('/get_diet', methods=['GET'])
+def create_diet(food_group, restriction):
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ? AND RESTRICTION IS NOT = ? ", (food_group, restriction,))
     users = cursor.fetchall()
     conn.close()
-    return jsonify(users), 200
+    return jsonify(users), 200'''
+
+@app.route('/create_diet', methods=['POST'])
+def create_diet():
+    data = request.get_json()
+    conn = sqlite3.connect('gym.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ? AND RESTRICTION IS NOT = ?",
+                   (data['food_group'], data['restrictions']))
+    conn.commit()
+    conn.close()
+    return jsonify({"message": "User Diet created successfully"}), 201
+
+
 
  # cursor.execute("DELETE FROM User WHERE CWID=?", (cwid,))
 if __name__ == '__main__':
