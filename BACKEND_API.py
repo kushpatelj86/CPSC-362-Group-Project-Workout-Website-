@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import sqlite3
-
+import database
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -79,34 +79,44 @@ def create_diet(food_group, restriction):
 
 @app.route('/create_diet', methods=['POST'])
 def create_diet():
+ 
     data = request.get_json()
+    print("Received data:", data)  # Print received data for debugging
+    print(data['food_group'])
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ?",
-                   (data['food_group']))
+
+    rows = database.connect_db()
+    for row in rows:
+        if row[7] == data['food_group']:
+            cursor.execute("INSERT INTO FOOD (FOOD_NAME, FOOD_ID, CALORIES, CARBS, FATS, PROTEINS, FIBER, FOOD_GROUP) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                (row[0], row[1], row[2], row[3], row[4],row[5],row[6],data['food_group']))
+            print("found a match and user created")
+
+    
     conn.commit()
+
+
+    rows = cursor.fetchall()
+    print("Num rowa: ", len(rows))
+    for row in rows:
+        print(row)
+
     conn.close()
+    print("Database connection closed.")  # Print message for debugging
     return jsonify({"message": "User Diet created successfully"}), 201
+    
+    
 
 @app.route('/get_diet', methods=['GET'])
 def get_diet():
-    food_group = request.args.get('food_group')  # Get the 'food_group' parameter from the query string
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
-
-    # Use a placeholder '?' in the query to avoid SQL injection
-    cursor.execute("SELECT * FROM FOOD WHERE FOOD_GROUP = ?", (food_group))
-
-    # Fetch all rows that match the query
-    diet_data = cursor.fetchall()
-
+    cursor.execute("SELECT * FROM FOOD")
+    food = cursor.fetchall()
     conn.close()
-
-    # Check if any data was found
-    if diet_data:
-        return jsonify({"diet_data": diet_data}), 200  # Return the data as JSON with status code 200 (OK)
-    else:
-        return jsonify({"message": "No diet data found"}), 404  # 
+    return jsonify(food), 200
+    
 
  # cursor.execute("DELETE FROM User WHERE CWID=?", (cwid,))
 if __name__ == '__main__':
