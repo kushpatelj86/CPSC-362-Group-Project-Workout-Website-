@@ -200,4 +200,12 @@ cursor.execute("INSERT INTO FOOD (FOOD_NAME, FOOD_ID, CALORIES, CARBS, FATS, PRO
             #SETS INT
 #cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0101, 'Standing Military Press', 12, 3)")
 
+cursor.execute("SELECT * FROM FOOD")
+
+
+rows = cursor.fetchall()
+
+def connect_db():
+    return rows
+
 conn.close()
