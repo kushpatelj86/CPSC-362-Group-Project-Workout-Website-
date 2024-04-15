@@ -1,42 +1,60 @@
-function create_diet(event) {
-    event.preventDefault(); // Prevent the default form submission
+
+
+  function getFoodItems() {
     
     // Get form data
-    const foodGroup = document.getElementById('food_group').value;
-    
-    // Convert form data to JSON object
-    
-    
 
-    // Send data to backend using fetch API
-    fetch('http://127.0.0.1:5000/create_diet', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ food_group: foodGroup }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        // Handle response from backend
-        console.log(data); // You can display a success message or perform other actions
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-
-      var mess = document.getElementById('diet');
-      mess.innerHTML = "diet created suuccesfully"; // Clear previous content
-
-
-
+    var foodGroup = document.getElementById('food_group').value;
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/get_food_items?food_group=' + foodGroup, true);
+    xhr.onload = function () {
+        if (xhr.status == 200) {
+            var data = JSON.parse(xhr.responseText);
+        } else {
+            console.error('Error fetching food items: ' + xhr.status);
+        }
+    };
+    xhr.send();
 
 
     document.getElementById('food_group').value = 'balanced';
     document.getElementById('allergies').value = 'none';
     document.getElementById('calories').value = '';
-    
-  }
+
+}
+
+
+
+function displayFoodItems(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  const foodGroup = document.getElementById('food_group').value;
+
+  fetch('http://127.0.0.1:5000/get_food_items?food_group=' + foodGroup)
+.then(response => response.json())
+.then(foods => {
+  // Assuming you have a div with id 'userList' to display the users
+  var foodListDiv = document.getElementById('diet');
+  foodListDiv.innerHTML = ''; // Clear previous content
+  foods.forEach((food,index) => {
+    if(index === (food.length - 1))
+    {
+      var foodItem = document.createElement('div');
+      foodItem.textContent = food
+      foodListDiv.appendChild(foodItem);
+    }
+  });
+
+
+
+})
+.catch(error => {
+  alert(error);
+});
+
+
+
+}
 
 
 

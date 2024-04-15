@@ -38,6 +38,14 @@
     font-family: "Georgia", sans-serif;
 }
 
+#diet{
+    color : rgb(3, 119, 13);
+    font-size: 18px;
+    font-weight: bold; 
+    font-family: "Georgia", sans-serif;
+}
+
+
 /*.message-title a{
     text-decoration: none;
     color: rgb(255, 60, 0);

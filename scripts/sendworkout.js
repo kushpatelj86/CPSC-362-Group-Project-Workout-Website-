@@ -1,76 +1,46 @@
+function sendWeeklyWorkouts(event) {
+  event.preventDefault(); // Prevent form submission
 
-function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-  
-  
-  function displayWeeklyWorkouts() {
-    var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-    days.forEach(day => {
-      var selectedWorkouts = [];
-      var checkboxes = document.querySelectorAll(`input[name='${day}']:checked`);
-      checkboxes.forEach((checkbox) => {
-        selectedWorkouts.push(checkbox.value);
-      });
+  // Get the form element
+  const form = document.getElementById('weeklyWorkoutForm');
 
-      
-      document.getElementById(`display${capitalize(day)}`).innerHTML = `${capitalize(day)}'s Selected Workouts: ` + selectedWorkouts.join(', ');
-      
+  // Collect selected workouts from checkboxes
+  const selectedWorkouts = {};
+  const checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+  checkboxes.forEach((checkbox) => {
+    const day = checkbox.name;
+    const workout = checkbox.value;
+    if (!(day in selectedWorkouts)) {
+      selectedWorkouts[day] = [];
+    }
+    selectedWorkouts[day].push(workout);
+  });
+  alert(JSON.stringify(selectedWorkouts))
 
-      var form = document.getElementById('weeklyWorkoutForm');
-      var formData = new FormData(form);
-
-     var jsonData = {};
-     formData.forEach((value,key) =>{
-        if(!jsonData[key]){
-        jsonData[key] = [];
+  // Send data to backend using fetch
+  fetch('http://127.0.0.1:5000/send_workouts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(selectedWorkouts),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
-      jsonData[key].push(value);
-
-     });
-
-     document.getElementById(`display${capitalize(day)}`).innerHTML += `(${JSON.stringify(jsonData)})`
-
-
-
-
-    /*fetch('http://127.0.0.1/5000/generate_workout_plan', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Object.fromEntries(formData)),
+      return response.json();
     })
-        .then(response => response.json())
-        .then(data => {
-        // Handle the response data here, such as displaying the generated workout plan
-        console.log(data);
-        })
-        .catch(error => {
-        // Handle any errors that occur during the fetch request
-        console.error('Error:', error);
-        });
+    .then((data) => {
+      alert(JSON.stringify(data));
+      var mess = document.getElementById('workouts');
+      mess.innerHTML = JSON.stringify(data); // Clear previous content
 
 
-
-
-
-      fetch('http://127.0.0.1:5000/get_workout_plan')
-    .then(response => response.json() )
-    .then(data => {
-        a = JSON.stringify(data, null, 2);
-        document.getElementById(`display${capitalize(day)}`).innerHTML += `(${a})`
-
+      // Optionally, update UI or show a success message
     })
-    .catch(err => {
-      
-        document.getElementById(`display${capitalize(day)}`).innerHTML += `(${err.message})`
-
-    });*/
-
-
-
-
-
+    .catch((error) => {
+      alert('Error sending workouts:', error);
+      // Optionally, show an error message to the user
     });
-  }
+}
