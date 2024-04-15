@@ -36,11 +36,13 @@ def get_users():
 
 
 
-@app.route('/get_food_items', methods=['GET'])
+@app.route('/send_diet', methods=['POST'])
 def get_food_items():
 
-    food_group = request.args.get('food_group')
-    print(food_group)
+    food_data = request.get_json()
+    food_group = food_data.get('food_group')  # Access the 'food_group' value
+
+    print('Received food group:', food_group)
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
 
@@ -51,7 +53,7 @@ def get_food_items():
         cursor.execute('SELECT * FROM FOOD')
     
     data = cursor.fetchall()
-    
+    foods = []
     conn.close()
     return jsonify(data)
 

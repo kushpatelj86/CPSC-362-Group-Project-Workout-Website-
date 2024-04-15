@@ -4,11 +4,10 @@
     <meta charset="UTF-8" >
       <meta name="viewport" content="width=device-width,initial-scale=1.0">
       <link rel="stylesheet" href="stylesheets/style.css"/>
-      <script src="scripts/script.js" defer></script>
+      <script src="scripts/senddiet.js" defer></script>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/a83c84c63a.js" crossorigin="anonymous"></script>
-      <script src="scripts/senddiet.js" defer></script>
 
 </head>
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent sticky-top">
@@ -54,10 +53,8 @@
 
             <section class="diet-form">
                 <h2>Create Your Diet Plan</h2>
-                <form action="#" method="post" >
-                    <div>
-                        
-                    </div>
+                <form action="#" method="post"  >
+            
                     <label for="calories">Daily Caloric Intake:</label>
                     <input type="number" id="calories" name="calories" min="1500" max="4000" step="100">
 
@@ -81,8 +78,7 @@
                         <option value="chocolate">Chocolate</option>
 
                     </select>
-                    <button type="submit" onclick="getFoodItems()">Enter Information</button>
-                    <button type="submit"  onclick="displayFoodItems(event)">Get Diet</button>
+                     <button type="submit" onclick="getFoodItems(event)">Enter Food</button>  
                 </form>
 
             </section>
