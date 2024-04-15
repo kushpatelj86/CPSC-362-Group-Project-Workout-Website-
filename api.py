@@ -1,7 +1,11 @@
-from flask import Flask, request, jsonify
+import sys
+sys.path.append('C:\\Users\\manna\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages')
+#comment out the first two lines I just needed those cuz otherwise flask wouldn't run
+from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import sqlite3
+import json
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes in the app
@@ -38,24 +42,33 @@ def get_users():
 
 @app.route('/send_diet', methods=['POST'])
 def get_food_items():
-
     food_data = request.get_json()
-    food_group = food_data.get('food_group')  # Access the 'food_group' value
+    food_group = food_data.get('food_group')
 
-    print('Received food group:', food_group)
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
 
-
     if food_group:
-        cursor.execute('SELECT * FROM FOOD WHERE food_group = ?', (food_group,))
+        cursor.execute('SELECT name, calories, carbohydrates, proteins, fats FROM FOOD WHERE food_group = ?', (food_group,))
     else:
         cursor.execute('SELECT * FROM FOOD')
     
     data = cursor.fetchall()
+
     foods = []
+    for item in data:
+        food_dict = {
+            'name': item[0],
+            'calories': item[1],
+            'carbohydrates': item[2],
+            'proteins': item[3],
+            'fats': item[4]
+        }
+        foods.append(food_dict)
+    
     conn.close()
-    return jsonify(data)
+    #print(foods)
+    return render_template('food_list.html', foods=foods)
 
 
  
