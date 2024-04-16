@@ -46,6 +46,38 @@ cursor.execute('''
 
 
 exercise_data = [
+
+    # will finish this afternoon
+    # Deltiods
+
+    # Bicepts
+
+    # Chest
+
+    # Forearm
+
+    # Side Abs
+
+    # Abdominal
+
+    # QUADS
+
+    # CALFS
+
+    # TIBIAL ANTERIOR
+
+    # UPPER BACK
+
+    # MIDDLE BACK
+
+    # TRICEPS
+
+    # HAMSTRING
+
+    # LOWER BACK
+
+    # Glutes
+
     ('Legs', 'Squats', 10, 3),
     ('Chest', 'Bench Press', 8, 4),
     ('Back', 'Deadlifts', 12, 3),
@@ -161,7 +193,7 @@ cursor.executemany('''
 
 
 cursor.executemany('''
-    INSERT INTO EXERCISES (BODY_PART, EXERCISE_NAME, REPS,SETS)
+    INSERT INTO EXERCISES (BODY_PART, EXERCISE_NAME, REPS, SETS)
     VALUES (?, ?, ?, ?)
 ''', exercise_data)
 
