@@ -24,9 +24,9 @@ def get_user():
     cursor.execute("INSERT INTO User (NAME, WEIGHT, HEIGHT, AGE, ALLERGIES) VALUES (?, ?, ?, ?, ?)",
                    (data['name'], data['weight'], data['height'], data['age'], data['allergies']))
     #conn.commit()
-    cursor.execute('SELECT * FROM USER')
-    data = cursor.fetchall()
-    
+    cursor.execute('SELECT * FROM User ORDER BY ROWID DESC LIMIT 1')
+    data = cursor.fetchone()
+
     conn.close()
     return jsonify({"message": "User created successfully", "data": data}), 201
 
