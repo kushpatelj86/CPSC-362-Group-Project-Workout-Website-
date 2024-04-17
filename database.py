@@ -53,6 +53,115 @@ exercise_data = [
     ('Shoulders', 'Military Press', 10, 3)
     
     # Additional exercises can be added here
+
+        ('Legs', 'Squats', 10, 3),
+    ('Chest', 'Bench Press', 8, 4),
+    ('Back', 'Deadlifts', 12, 3),
+    ('Shoulders', 'Military Press', 10, 3)
+
+    # NEW DATA
+    ('Deltoids', 'Standing Military Press', 12, 3),
+    ('Deltoids', 'Lateral Raises, 15, 3'),
+    ('Deltoids', 'Front Raises', 15, 3),
+    ('Deltoids', 'Bent-Over Reverse Flyes', 15, 3),
+    ('Deltoids', 'Arnold Press', 12, 3),
+    ('Deltoids', 'Upright Row', 12, 3),
+
+    ('Biceps', 'Bicep Curls', 12, 3),
+    ('Biceps', 'Hammer Curls', 12, 3),
+    ('Biceps', 'Concentration Curls', 12, 3),
+    ('Biceps', 'Preacher Curls', 12, 3),
+    ('Biceps', 'Incline Dumbbell Curls', 12, 3),
+    ('Biceps', 'Cable Bicep Curls', 12, 3),
+
+    ('Chest', 'Barbell Bench Press', 12, 3),
+    ('Chest', 'Dumbbell Flyes', 12, 3),
+    ('Chest', 'Incline Bench Press', 12, 3),
+    ('Chest', 'Chest Dips', 12, 3),
+    ('Chest', 'Push-Ups', 12, 3),
+    ('Chest', 'Cable Crossover', 12, 3),
+
+    ('Forearm', 'Wrist Curls', 15, 3),
+    ('Forearm', 'Reverse writ curls', 15, 3),
+    ('Forearm', 'Hammer curls', 12, 3),
+    ('Forearm', 'Farmers walk', 45, 3),
+    ('Forearm', 'Behind-the-back wrist curls', 15, 3),
+    ('Forearm', 'Reverse barbell curls', 12, 3),
+
+    ('SideAbs', 'Russian Twists', 12, 3),
+    ('SideAbs', 'SidePlanks', 12, 3),
+    ('SideAbs', 'Side Plank Hip Dips', 12, 3),
+    ('SideAbs', 'Oblique V-ups', 12, 3),
+    ('SideAbs', 'Bicycle Crunches', 12, 3),
+    ('SideAbs', 'Woodchoppers', 12, 3),
+
+    ('Abdominal', 'Crunches', 12, 3),
+    ('Abdominal', 'Leg Raises', 12, 3),
+    ('Abdominal', 'Planks', 12, 3),
+    ('Abdominal', 'Mountain Climbers', 12, 3),
+    ('Abdominal', 'Russian Twists', 12, 3),
+    ('Abdominal', 'Bicycle Crunches', 12, 3),
+
+    ('Quads', 'Barbell Squats', 12, 3),
+    ('Quads', 'Leg Press', 12, 3),
+    ('Quads', 'Walking Lunges', 12, 3),
+    ('Quads', 'Leg Extensions', 12, 3),
+    ('Quads', 'Split Squats', 12, 3),
+    ('Quads', 'Step-Ups', 12, 3),
+
+    ('Calfs', 'Standing Calf Raises', 12, 3),
+    ('Calfs', 'Seated Calf Raises', 12, 3),
+    ('Calfs', 'Calf Raises on Leg Press Machine', 12, 3),
+    ('Calfs', 'Jump Rope', 12, 3),
+    ('Calfs', 'Box Jumps', 12, 3),
+    ('Calfs', 'Single-Leg Calf Raises', 12, 3),
+
+    ('TibialAnterior', 'Toe Raises', 12, 3),
+    ('TibialAnterior', 'Dorsiflexion  with Resistance Band', 12, 3),
+    ('TibialAnterior', 'Tibialis Raises on Leg Press Machine', 12, 3),
+    ('TibialAnterior', 'Resistance Band Dorsiflexion', 12, 3),
+    ('TibialAnterior', 'Tibialis Anterior Stretch', 12, 3),
+    ('TibialAnterior', 'Calf and Shin Raises', 12, 3),
+
+    ('Back', 'Pull-Ups', 15, 3),
+    ('Back', 'Bent-Over Rows', 12, 3),
+    ('Back', 'Lat Pulldowns', 12, 3),
+    ('Back', 'T-Bar Row', 12, 3),
+    ('Back', 'Seated Cable Rows', 12, 3),
+    ('Back', 'Face Pulls', 15, 3),
+    ('Back', 'One-Arm Dumbbell Rows', 12, 3),
+    ('Back', 'T-Bar Rows', 12, 3),
+    ('Back', 'Seated Cable Rows with Wide Grip', 12, 3),
+    ('Back', 'Barbell Bent-Over Rows (Underhand Grip)', 12, 3),
+    ('Back', 'Chest-Supported Dumbbell Row', 15, 3),
+    ('Back', 'Reverse Flyes', 15, 3),
+    ('Back', 'Deadlifts', 10, 3),
+    ('Back', 'Hyperextensions (Back Extensions)', 15, 3),
+    ('Back', 'Good Mornings', 12, 3),
+    ('Back', 'Supermans', 15, 3),
+    ('Back', 'Romanian Deadlifts', 12, 3),
+    ('Back', 'Bird Dogs', 10, 3),
+
+    ('Triceps', 'Tricep Dips', 12, 3),
+    ('Triceps', 'Skull Crushers (Lying Triceps Extensions)', 12, 3),
+    ('Triceps', 'Tricep Pushdowns', 15, 3),
+    ('Triceps', 'Close-Grip Bench Press', 12, 3),
+    ('Triceps', 'Overhead Tricep Extension', 15, 3),
+    ('Triceps', 'Diamond Push-Ups', 12, 3),
+
+    ('Hamstrings', 'Romanian Deadlifts', 12, 3),
+    ('Hamstrings', 'Lying Leg Curls', 15, 3),
+    ('Hamstrings', 'Stiff-Legged Deadlifts', 12, 3),
+    ('Hamstrings', 'Glute-Ham Raises', 10, 3),
+    ('Hamstrings', 'Single-Leg Deadlifts', 12, 3),
+    ('Hamstrings', 'Swiss Ball Hamstring Curls', 15, 3),
+
+    ('Glutes', 'Squats', 12, 3),
+    ('Glutes', 'Hip Thrusts', 12, 3),
+    ('Glutes', 'Lunges', 10, 3),
+    ('Glutes', 'Deadlifts', 12, 3),
+    ('Glutes', 'Glute Bridges', 20, 3),
+    ('Glutes', 'Cable Kickbacks', 15, 3)
 ]
 
 
