@@ -47,17 +47,8 @@ cursor.execute('''
 
 exercise_data = [
 
-    ('Legs', 'Squats', 10, 3),
-    ('Chest', 'Bench Press', 8, 4),
-    ('Back', 'Deadlifts', 12, 3),
-    ('Shoulders', 'Military Press', 10, 3)
-    
-    # Additional exercises can be added here
-
-        ('Legs', 'Squats', 10, 3),
-    ('Chest', 'Bench Press', 8, 4),
-    ('Back', 'Deadlifts', 12, 3),
-    ('Shoulders', 'Military Press', 10, 3)
+    # Legs, back, and sholders should be removed from
+    #    website (covered by other catagories)
 
     # NEW DATA
     ('Deltoids', 'Standing Military Press', 12, 3),
@@ -123,24 +114,26 @@ exercise_data = [
     ('TibialAnterior', 'Tibialis Anterior Stretch', 12, 3),
     ('TibialAnterior', 'Calf and Shin Raises', 12, 3),
 
-    ('Back', 'Pull-Ups', 15, 3),
-    ('Back', 'Bent-Over Rows', 12, 3),
-    ('Back', 'Lat Pulldowns', 12, 3),
-    ('Back', 'T-Bar Row', 12, 3),
-    ('Back', 'Seated Cable Rows', 12, 3),
-    ('Back', 'Face Pulls', 15, 3),
-    ('Back', 'One-Arm Dumbbell Rows', 12, 3),
-    ('Back', 'T-Bar Rows', 12, 3),
-    ('Back', 'Seated Cable Rows with Wide Grip', 12, 3),
-    ('Back', 'Barbell Bent-Over Rows (Underhand Grip)', 12, 3),
-    ('Back', 'Chest-Supported Dumbbell Row', 15, 3),
-    ('Back', 'Reverse Flyes', 15, 3),
-    ('Back', 'Deadlifts', 10, 3),
-    ('Back', 'Hyperextensions (Back Extensions)', 15, 3),
-    ('Back', 'Good Mornings', 12, 3),
-    ('Back', 'Supermans', 15, 3),
-    ('Back', 'Romanian Deadlifts', 12, 3),
-    ('Back', 'Bird Dogs', 10, 3),
+    ('Upper back', 'Pull-Ups', 15, 3),
+    ('Upper back', 'Bent-Over Rows', 12, 3),
+    ('Upper back', 'Lat Pulldowns', 12, 3),
+    ('Upper back', 'T-Bar Row', 12, 3),
+    ('Upper back', 'Seated Cable Rows', 12, 3),
+    ('Upper back', 'Face Pulls', 15, 3),
+
+    ('Middle back', 'One-Arm Dumbbell Rows', 12, 3),
+    ('Middle back', 'T-Bar Rows', 12, 3),
+    ('Middle back', 'Seated Cable Rows with Wide Grip', 12, 3),
+    ('Middle back', 'Barbell Bent-Over Rows (Underhand Grip)', 12, 3),
+    ('Middle back', 'Chest-Supported Dumbbell Row', 15, 3),
+    ('Middle back', 'Reverse Flyes', 15, 3),
+
+    ('Lower back', 'Deadlifts', 10, 3),
+    ('Lower back', 'Hyperextensions (Back Extensions)', 15, 3),
+    ('Lower back', 'Good Mornings', 12, 3),
+    ('Lower back', 'Supermans', 15, 3),
+    ('Lower back', 'Romanian Deadlifts', 12, 3),
+    ('Lower back', 'Bird Dogs', 10, 3),
 
     ('Triceps', 'Tricep Dips', 12, 3),
     ('Triceps', 'Skull Crushers (Lying Triceps Extensions)', 12, 3),
