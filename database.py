@@ -51,8 +51,10 @@ exercise_data = [
     ('Chest', 'Bench Press', 8, 4),
     ('Back', 'Deadlifts', 12, 3),
     ('Shoulders', 'Military Press', 10, 3)
+    
     # Additional exercises can be added here
 ]
+
 
 # Insert sample data into the table
 sample_data = [

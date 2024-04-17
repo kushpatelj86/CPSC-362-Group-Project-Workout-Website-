@@ -16,25 +16,22 @@ CORS(app)  # Enable CORS for all routes in the app
 
 
 
-@app.route('/create_user', methods=['POST'])
-def create_user():
+@app.route('/get_user', methods=['POST'])
+def get_user():
     data = request.get_json()
     conn = sqlite3.connect('gym.db')
     cursor = conn.cursor()
     cursor.execute("INSERT INTO User (NAME, WEIGHT, HEIGHT, AGE, ALLERGIES) VALUES (?, ?, ?, ?, ?)",
                    (data['name'], data['weight'], data['height'], data['age'], data['allergies']))
     #conn.commit()
+    cursor.execute('SELECT * FROM USER')
+    data = cursor.fetchall()
+    
     conn.close()
-    return jsonify({"message": "User created successfully"}), 201
+    return jsonify({"message": "User created successfully", "data": data}), 201
 
-@app.route('/get_users', methods=['GET'])
-def get_users():
-    conn = sqlite3.connect('gym.db')
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM User")
-    users = cursor.fetchall()
-    conn.close()
-    return jsonify(users), 200
+
+
 
 
 
@@ -101,13 +98,6 @@ def send_workouts():
     # Process the received workouts here (e.g., save to database)
     # For demonstration purposes, let's just return a success message
     return jsonify({'workouts': days_and_workouts})
-
-
-
-
-
-
-
 
 
 

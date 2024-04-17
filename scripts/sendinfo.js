@@ -16,7 +16,7 @@ function create_user(event) {
   var allergies = document.getElementById('allergies').value;
 
   // Send data to backend using fetch API
-  fetch('http://127.0.0.1:5000/create_user', {
+  fetch('http://127.0.0.1:5000/get_user', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ function create_user(event) {
     .then(response => response.json())
     .then(data => {
       // Handle response from backend
-      alert(data); // You can display a success message or perform other actions
+      alert(JSON.stringify(data)); // You can display a success message or perform other actions
       
     })
     .catch(error => {
