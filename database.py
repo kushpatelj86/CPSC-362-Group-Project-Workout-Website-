@@ -47,37 +47,6 @@ cursor.execute('''
 
 exercise_data = [
 
-    # will finish this afternoon
-    # Deltiods
-
-    # Bicepts
-
-    # Chest
-
-    # Forearm
-
-    # Side Abs
-
-    # Abdominal
-
-    # QUADS
-
-    # CALFS
-
-    # TIBIAL ANTERIOR
-
-    # UPPER BACK
-
-    # MIDDLE BACK
-
-    # TRICEPS
-
-    # HAMSTRING
-
-    # LOWER BACK
-
-    # Glutes
-
     ('Legs', 'Squats', 10, 3),
     ('Chest', 'Bench Press', 8, 4),
     ('Back', 'Deadlifts', 12, 3),
@@ -110,7 +79,6 @@ sample_data = [
     ('bagel with cream cheese and sliced bananas', 'dairy', 114.4, 18.4, 10.7, 0.3, 'Vegan'),
     ('bagel with cream cheese and yogurt', 'dairy', 528, 68.4, 21.5, 19, 'High-protein'),
     ('Breakfast burrito w/ eggs and sausage', 'eggs, meat', 277, 21.4, 10.5, 16.3, 'Vegetarian'),
-    ('Breakfast burrito w/ eggs and veggie-sausage', 'eggs', 157, 23.4, 12.5, 1.8, 'Vegetarian')
 
 
     # Lunch & Dinner
@@ -187,15 +155,113 @@ sample_data = [
 
 cursor.executemany('''
     INSERT INTO FOOD ('name', 'allergies', calories, carbohydrates, proteins, fats, 'food_group')
-    VALUES (?, ?, ?, ?, ?, ?)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
 ''', sample_data)
 
-
+#('Shoulders', 'Military Press', 10, 3)
 
 cursor.executemany('''
     INSERT INTO EXERCISES (BODY_PART, EXERCISE_NAME, REPS, SETS)
     VALUES (?, ?, ?, ?)
 ''', exercise_data)
+
+'''cursor.execute("INSERT INTO EXERCISES (BODY_PA, EXERCISE_NAME, REPS, SETS) VALUES (0101, 'Standing Military Press', 12, 3)")
+
+cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0102, ‘Lateral Raises, 15, 3)")
+cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0103, ‘Front Raises’, 15, 3)")
+cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0104, ‘Bent-Over Reverse Flyes’, 15, 3)")
+cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0105, ‘Arnold Press’, 12, 3)")
+cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0106, ‘Upright Row', 12, 3)")'''
+
+# Side abs  
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0501, ‘Russian Twists', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0502, ‘SidePlanks', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0503, 'Side Plank Hip Dips', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0504, ‘Oblique V-ups’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0505, ‘Bicycle Crunches', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0506, ‘Woodchoppers', 12, 3)")
+
+# Abdominal
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0701, ‘Crunches', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0702, ‘Leg Raises', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0703, ‘Planks', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0704, ‘Mountain Climbers', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0705, ‘Russian Twists', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0706, ‘Bicycle Crunches', 12, 3)")
+
+# Quads
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0801, ‘Barbell Squats', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0802, ‘Leg Press', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0803, ‘Walking Lunges', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0804, ‘Leg Extensions', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0805, ‘Split Squats', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0806, ‘Step-Ups’, 12, 3)")
+
+# Calves
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0901, 'Standing Calf Raises', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0902, 'Seated Calf Raises', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0903, ‘Calf Raises on Leg Press Machine', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0904, ‘Jump Rope’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0905, ‘Box Jumps', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (0906, ‘Single-Leg Calf Raises’, 12, 3)")
+
+# Tibial Anterior
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1001, ‘Toe Raises', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1002, ‘Dorsiflexion  with Resistance Band', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1003, ’Tibialis Raises on Leg Press Machine’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1004, ‘Resistance Band Dorsiflexion', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1005, ’Tibialis Anterior Stretch', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1006, ‘Calf and Shin Raises', 12, 3)")
+
+
+# Upper back
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1101, ‘Pull-Ups’, 15, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1102, ‘Bent-Over Rows’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1103, ‘Lat Pulldowns', 12, 3)")
+###cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1104, ’T-Bar Row’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1105, ‘Seated Cable Rows', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1106, ‘Face Pulls', 15, 3)")
+
+# Middle back
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1201, ‘One-Arm Dumbbell Rows’, 12, 3)")
+###cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1202, ’T-Bar Rows’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1203, 'Seated Cable Rows with Wide Grip’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1204, ‘Barbell Bent-Over Rows (Underhand Grip)’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1205, ‘Chest-Supported Dumbbell Row’, 15, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1206, ‘Reverse Flyes', 15, 3)")
+
+# Triceps
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1301, ‘Tricep Dips', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1302, ‘Skull Crushers (Lying Triceps Extensions)’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1303, ’Tricep Pushdowns', 15, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1304, ‘Close-Grip Bench Press’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1305, ‘Overhead Tricep Extension', 15, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1306, ‘Diamond Push-Ups’, 12, 3)")
+
+# Hamstrings
+###cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1401, ‘Romanian Deadlifts', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1402, ‘Lying Leg Curls', 15, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1403, ‘Stiff-Legged Deadlifts’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1404, ’Glute-Ham Raises’, 10, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1405, ‘Single-Leg Deadlifts’, 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1406, 'Swiss Ball Hamstring Curls', 15, 3)")
+
+# Lower back
+###cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1501, ‘Deadlifts', 10, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1502, ‘Hyperextensions (Back Extensions)’, 15, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1503, ‘Good Mornings', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1504, ‘Supermans', 15, 3)")
+###cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1505, ‘Romanian Deadlifts', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1506, ‘Bird Dogs', 10, 3)")
+
+# Glutes
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1601, 'Squats', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1602, ‘Hip Thrusts', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1603, ‘Lunges', 10, 3)")
+###cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1604, ‘Deadlifts', 12, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1605, ‘Glute Bridges', 20, 3)")
+#cursor.execute("INSERT INTO EXERCISES (EXERCISE_ID, EXERCISE_NAME, REPS, SETS) VALUES (1606, ‘Cable Kickbacks', 15, 3)")
+
 
 # Commit changes and close the connection
 conn.commit()
