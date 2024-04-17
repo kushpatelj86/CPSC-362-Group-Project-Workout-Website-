@@ -26,15 +26,16 @@ function create_user(event) {
     .then(response => response.json())
     .then(data => {
       // Handle response from backend
-      alert(JSON.stringify(data)); // You can display a success message or perform other actions
+      alert(JSON.stringify(data));
+       var mess = document.getElementById('user');
+       mess.innerHTML = JSON.stringify(data); // Clear previous content
       
     })
     .catch(error => {
       console.error('Error:', error);
     });
 
-    var mess = document.getElementById('user');
-    mess.innerHTML = `user created successfukky`; // Clear previous content
+   
 
 
 
