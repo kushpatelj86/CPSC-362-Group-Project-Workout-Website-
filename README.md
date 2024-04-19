@@ -16,8 +16,7 @@
 - Moksh Patel
 ## The Project
 This project has the following components:
-- BMI Calculator
-- Workout Generator
-- Diet Plan
-- Tracking via user account
-## 
+### BMI Calculator
+### Workout Generator
+### Diet Plan
+###Tracking via user account
