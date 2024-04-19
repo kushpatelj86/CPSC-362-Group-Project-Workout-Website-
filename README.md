@@ -1,5 +1,5 @@
 # FITFIX
-'"Where you come to get your Fitness, Fixed"'
+"Where you come to get your Fitness, Fixed"
 ## OUR STACK
 - sqlite3
 - Python
