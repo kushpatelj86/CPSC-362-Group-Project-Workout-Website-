@@ -1,10 +1,10 @@
 # FITFIX
 
 ## OUR STACK
-- SQLLtie 3
+- sqlite3
+- Python
 - HTML
 - CSS
-- Python
 - Flask
 - GitHub
 ## Authors
