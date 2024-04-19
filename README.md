@@ -19,4 +19,4 @@ This project has the following components:
 ### BMI Calculator
 ### Workout Generator
 ### Diet Plan
-###Tracking via user account
+### Tracking via user account
