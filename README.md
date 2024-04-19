@@ -8,7 +8,7 @@
 - Flask
 - GitHub
 ## Authors
-- Kush Patel,
+- Kush Patel
 - Vamsi Mannava
 - Mark Perez
 - Christopher Contreras
