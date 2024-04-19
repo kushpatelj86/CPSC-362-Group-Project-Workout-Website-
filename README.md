@@ -6,6 +6,7 @@
 - HTML
 - CSS
 - Flask
+- JavaScript
 - GitHub
 ## Authors
 - Kush Patel
@@ -14,8 +15,9 @@
 - Christopher Contreras
 - Mason Jennings
 - Moksh Patel
-## The Project
-This project has the following components:
+## The Website
+Our website has the following goals:
+
 ### BMI Calculator
 ### Workout Generator
 ### Diet Plan
