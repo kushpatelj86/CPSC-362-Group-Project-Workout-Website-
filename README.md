@@ -1,5 +1,7 @@
 # FITFIX
-"Where you come to get your Fitness, Fixed"
+_"Where you come to get your Fitness, Fixed"_
+
+FitFix is a new type of all-inclusive fitness application that monitors your overall physical fitness. This web application calculates your BMI, generates workouts, and creates a healthy diet plan. This application achieves our goal of encouraging users to live an active and healthy lifestyle.
 
 ## OUR STACK
 - sqlite3
