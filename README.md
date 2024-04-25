@@ -44,5 +44,7 @@ The diet plan allows users to craft healthy menu's each day of the week. Users c
 -  Poultry
 -  Dairy
 
+![](https://github.com/kushpatelj86/CPSC-362-Group-Project-Workout-Website-/blob/main/screenshots/Screenshot%20from%202024-04-25%2014-21-25.png)
+
 ### Tracking via user account
 Users will be able to store and retrieve information in their FitFix Account:
