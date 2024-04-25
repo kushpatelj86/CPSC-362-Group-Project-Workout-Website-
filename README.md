@@ -27,7 +27,9 @@ Our website has the following goals:
 - Allows users to create a healthy diet plan
 
 ### BMI Calculator
-The BMI Calculator calculates a user's BMI based on their height and weight. The  
+The BMI Calculator calculates a user's BMI based on their height and weight.
+
+![](https://github.com/kushpatelj86/CPSC-362-Group-Project-Workout-Website-/blob/main/screenshots/Screenshot%20from%202024-04-25%2011-23-52.png)
 
 ### Workout Generator
 The workout generator allows users to craft their perfect workout by choosing muscle groups they would like to work on each day of the week. FITFIX takes the user's preferences into account, then gives a 7-day workout plan, including specific exercises and the corresponding number of reps.
