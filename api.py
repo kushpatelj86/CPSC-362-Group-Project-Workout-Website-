@@ -23,7 +23,7 @@ def get_user():
     cursor = conn.cursor()
     cursor.execute("INSERT INTO User (NAME, WEIGHT, HEIGHT, AGE, ALLERGIES) VALUES (?, ?, ?, ?, ?)",
                    (data['name'], data['weight'], data['height'], data['age'], data['allergies']))
-    #conn.commit()
+    conn.commit()
     cursor.execute('SELECT * FROM User ORDER BY ROWID DESC LIMIT 1')
     data = cursor.fetchone()
 
